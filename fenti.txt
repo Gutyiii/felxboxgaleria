@@ -1,1 +1,4 @@
 fent beírt sor
+a sor fenti nagyon fontos
+a fenti sor nem nagyon fontoss
+sor ez is kell idefent
