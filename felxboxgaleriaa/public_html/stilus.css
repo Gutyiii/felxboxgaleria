@@ -2,9 +2,93 @@
 
 main, header, nav, article, aside, footer {
     border: 1px solid gray;
+    box-sizing: border-box;
+    padding: 10pt;
 }
 
 body {
     background-image: url("kepek/hatter.jpg");
     color: white;
+
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+nav, footer {
+    flex: 0 0 100%;
+}
+
+article {
+    flex: 0 0 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+aside {
+    flex: 0 0 25%;
+}
+
+#baloldal {
+    order: -1;
+}
+
+nav {
+    order: -2;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: lightgrey;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+
+nav ul li {
+    padding: 10px;
+    list-style-type: none;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: brown;
+
+}
+
+img {
+    width: 100%;
+}
+
+article div {
+    flex: 0 0 calc(33.3% - 10px);
+    margin: 5px;
+}
+
+@media only screen and (max-width600px) {
+    #baloldal {
+        order: 0;
+    }
+    main {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width400px) {
+    article div {
+        flex: 0 0 100%;
+    }
+    nav, nav ul {
+        flex-direction: column;
+    }
 }
